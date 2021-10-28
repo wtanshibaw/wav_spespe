@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Exports>
+  <Tag>
+    <SortPriority>0</SortPriority>
+    <IsChecked>false</IsChecked>
+    <IsExpanded>false</IsExpanded>
+    <Enabled>true</Enabled>
+    <ID>3c1ea586-5ee4-40f0-ab07-ebfd649327f7</ID>
+    <Name>01_ult_VS_Bahamut-Twintania</Name>
+  </Tag>
+  <Panels />
+  <Spells />
+  <Tickers>
+    <OnePointTelop>
+      <SortPriority>0</SortPriority>
+      <IsChecked>false</IsChecked>
+      <IsExpanded>false</IsExpanded>
+      <Enabled>true</Enabled>
+      <ID>1</ID>
+      <Guid>afe37135-bc8d-4975-a698-da577051e27b</Guid>
+      <Left>-1360</Left>
+      <Top>630</Top>
+      <Title>02_ツイスター</Title>
+      <Message>ツイスター</Message>
+      <RegexEnabled>true</RegexEnabled>
+      <Keyword>「ツイスター」の構え。</Keyword>
+      <Delay>0</Delay>
+      <DisplayTime>3</DisplayTime>
+      <Font FontFamily="Yu Gothic UI" Size="30" Stretch="Normal" Style="Normal" Weight="Normal" />
+      <FontColor>#FFFFFF</FontColor>
+      <FontOutlineColor>#DC143C</FontOutlineColor>
+      <BarBlurRadius>14</BarBlurRadius>
+      <BackgroundAlpha>0</BackgroundAlpha>
+      <BackgroundColor>#FFFFFF</BackgroundColor>
+      <AddMessageEnabled>false</AddMessageEnabled>
+      <ProgressBarEnabled>true</ProgressBarEnabled>
+      <JobFilter />
+      <PartyJobFilter />
+      <PartyCompositionFilter />
+      <ZoneFilter>733</ZoneFilter>
+      <TimersMustRunningForStart />
+      <TimersMustStoppingForStart />
+      <ExpressionFilter>
+        <expression />
+        <expression />
+        <expression />
+        <expression />
+      </ExpressionFilter>
+      <IsSequentialTTS>false</IsSequentialTTS>
+      <MatchTextToSpeak />
+      <DelayTextToSpeak />
+      <MatchAdvancedConfig>
+        <IsEnabled>false</IsEnabled>
+        <ToMainDevice>true</ToMainDevice>
+        <ToSubDevice>false</ToSubDevice>
+        <ToDicordTextChat>false</ToDicordTextChat>
+        <Palette>Default</Palette>
+      </MatchAdvancedConfig>
+      <DelayAdvancedConfig>
+        <IsEnabled>false</IsEnabled>
+        <ToMainDevice>true</ToMainDevice>
+        <ToSubDevice>false</ToSubDevice>
+        <ToDicordTextChat>false</ToDicordTextChat>
+        <Palette>Default</Palette>
+      </DelayAdvancedConfig>
+      <DelaySound />
+      <MatchSound />
+    </OnePointTelop>
+    <OnePointTelop>
+      <SortPriority>0</SortPriority>
+      <IsChecked>false</IsChecked>
+      <IsExpanded>false</IsExpanded>
+      <Enabled>true</Enabled>
+      <ID>2</ID>
+      <Guid>0fa9d325-7067-4703-b52f-6f7c2eaddc74</Guid>
+      <Left>1040</Left>
+      <Top>630</Top>
+      <Title>03_デスセンテンス</Title>
+      <Message>牽制</Message>
+      <RegexEnabled>true</RegexEnabled>
+      <Keyword>「デスセンテンス」の構え。</Keyword>
+      <Delay>0</Delay>
+      <DisplayTime>6</DisplayTime>
+      <Font FontFamily="Yu Gothic UI" Size="30" Stretch="Normal" Style="Normal" Weight="Normal" />
+      <FontColor>#FFFFFF</FontColor>
+      <FontOutlineColor>#DC143C</FontOutlineColor>
+      <BarBlurRadius>14</BarBlurRadius>
+      <BackgroundAlpha>0</BackgroundAlpha>
+      <BackgroundColor>#FFFFFF</BackgroundColor>
+      <AddMessageEnabled>false</AddMessageEnabled>
+      <ProgressBarEnabled>true</ProgressBarEnabled>
+      <JobFilter />
+      <PartyJobFilter />
+      <PartyCompositionFilter />
+      <ZoneFilter>733</ZoneFilter>
+      <TimersMustRunningForStart />
+      <TimersMustStoppingForStart />
+      <ExpressionFilter>
+        <expression />
+        <expression />
+        <expression />
+        <expression />
+      </ExpressionFilter>
+      <IsSequentialTTS>false</IsSequentialTTS>
+      <MatchTextToSpeak />
+      <DelayTextToSpeak />
+      <MatchAdvancedConfig>
+        <IsEnabled>false</IsEnabled>
+        <ToMainDevice>true</ToMainDevice>
+        <ToSubDevice>false</ToSubDevice>
+        <ToDicordTextChat>false</ToDicordTextChat>
+        <Palette>Default</Palette>
+      </MatchAdvancedConfig>
+      <DelayAdvancedConfig>
+        <IsEnabled>false</IsEnabled>
+        <ToMainDevice>true</ToMainDevice>
+        <ToSubDevice>false</ToSubDevice>
+        <ToDicordTextChat>false</ToDicordTextChat>
+        <Palette>Default</Palette>
+      </DelayAdvancedConfig>
+      <DelaySound />
+      <MatchSound />
+    </OnePointTelop>
+  </Tickers>
+</Exports>
