@@ -1,14 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!-- 毎回更新する -->
+@{ var rev = "version 1.2"; }
+@{ var date = "2021/10/28"; }
 <timeline>
   <name>[KNMRN]絶アレキサンダー討滅戦</name>
-  @{ var rev = "version 1.0"; }
   <rev>@rev</rev>
   <description>
-    最終更新：2021/10/20 anoyetta様の絶アレキタイムラインを改変したもの
-    更新履歴：1.0   ：初回版完成
-    更新履歴：0.2 β：次元断絶を修正
-    更新履歴：0.1 β：仮判決と仮審判を修正
-    更新履歴：0.0 β：初版作成
+    最終更新：@date anoyetta様の絶アレキタイムラインを改変したもの
   </description>
   <author>wabe</author>
   <license>CC BY-SA</license>
@@ -32,45 +30,6 @@
     <a time="000" name="clear">
       <expressions>
         <!-- メンバー初期化 -->
-        <table>
-        {
-            "method":"Truncate", "table":"nex_judge_table",
-            "cols" : []
-        }
-        </table>
-        @{
-            var i = 0;
-            var j = 0;
-            foreach(var member in Model.Party) {
-              if(@member.Role.Contains("DPS")) {
-                <table>
-                {
-                    "method":"Insert", "table":"DPSTable",
-                    "cols" : [
-                        { "name":"Id", "val":"@i", "key":"true" },
-                        { "name":"Name", "val":" @member.Name" },
-                        { "name":"Job", "val":" @member.Job" },
-                        { "name":"Role", "val":"DPS" },
-                    ]
-                }
-                </table>
-                i++;
-              } else {
-                <table>
-                {
-                    "method":"Insert", "table":"TankHealerTable",
-                    "cols" : [
-                        { "name":"Id", "val":"@j", "key":"true" },
-                        { "name":"Name", "val":" @member.Name" },
-                        { "name":"Job", "val":" @member.Job" },
-                        { "name":"Role", "val":"TH" },
-                    ]
-                }
-                </table>
-                j++;
-              }
-            }
-        }
         <table>
         {
             "method":"Truncate", "table":"DiceTable1",
@@ -457,247 +416,253 @@
     </t>
 
     <!-- ジャッジメントナイサイ START -->
-    <!-- 初期化 -->
-    <t text="フラグ初期化" sync="ブルートジャスティスは「ジャッジメントナイサイ」の構え。" >
-      <expressions>
-        <set name="judge_timing" value="none" />
-        <set name="debuff_type" value="none" />
-      </expressions>
-      @for(i = 0; i < 4; i++) {
-        <table>
-        {
-          "method" : "Insert",
-          "table" : "NexJudgeTable",
-          "cols" : [
-            {
-              "name" : "id",
-              "val" : "@i",
-              "key" : "true"
-            },
-            {
-              "name" : "Name",
-              "val" : "",
+    <!--最後の仮判決-->
+    <t sync="[mex] gains the effect of 最後の仮判決α" notice="あるふぁ" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="alpha"/>
+        </expressions>
+        <v-notice order="1" text="仮判決α➔${_mex}" icon="alpha.png" duration="36" sync-to-hide="[mex] loses the effect of 最後の仮判決α"/>
+    </t>
+    <t sync="[mex] gains the effect of 最後の仮判決β" notice="べーた" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="beta"/>
+        </expressions>
+        <v-notice order="1" text="仮判決β➔${_mex}" icon="beta.png" duration="36" sync-to-hide="[mex] loses the effect of 最後の仮判決β"/>
+    </t>
+    <t sync="[mex] gains the effect of 最後の仮判決γ" notice="がんま" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="gamma"/>
+        </expressions>
+        <v-notice order="1" text="仮判決γ➔${_mex}" icon="gamma.png" duration="36" sync-to-hide="[mex] loses the effect of 最後の仮判決γ"/>
+    </t>
+    <t sync="[mex] gains the effect of 最後の仮判決δ" notice="でるた" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="delta"/>
+        </expressions>
+        <v-notice order="1" text="仮判決δ➔${_mex}" icon="delta.png" duration="36" sync-to-hide="[mex] loses the effect of 最後の仮判決δ"/>
+    </t>
+    <!--他パーティーメンバー-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Party[i].Name!=Model.Player.Name){
+                //値をセットする
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の仮判決α" notice="あるふぁ" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="alpha"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の仮判決β" notice="べーた" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="beta"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の仮判決γ" notice="がんま" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="gamma"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の仮判決δ" notice="でるた" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="delta"/>
+                    </expressions>
+                </t>
             }
-          ]
-        }
-        </table>
-      }
-    </t>
-
-    <!-- 奇数フラグONトリガー -->
-    <t text="ナイサイ1回目" sync="1A:[id8]:[mex] gains the effect of 最後の仮判決(α|β|γ|δ) from  for 36.00 Seconds." notice="" sync-count="1" >
-      <expressions>
-        <pre name="judge_timing" value="none" />
-        <set name="judge_timing" value="odd" />
-      </expressions>
-    </t>
-    
-    <!-- 偶数フラグONトリガー -->
-    <t text="最後の審判で判断" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決(α|β|γ|δ) from  for 36.00 Seconds." notice="" sync-count="4" >
-      <expressions>
-        <pre name="judge_timing" value="none" />
-        <set name="judge_timing" value="even" />
-      </expressions>
-    </t>
-
-    <!-- 仮判決 mex -->
-    <t text="仮判決α" sync="1A:[id8]:[mex] gains the effect of 最後の仮判決α from  for 36.00 Seconds." notice="" >
-      <expressions>
-        <set name="debuff_type" value="a" />
-      </expressions>
-      <v-notice text="仮判決α ➔ ${_mex}" order="1" duration="36" icon="α.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-    </t>
-
-    <t text="仮判決β" sync="1A:[id8]:[mex] gains the effect of 最後の仮判決β from  for 36.00 Seconds." notice="" >
-      <expressions>
-        <set name="debuff_type" value="b" />
-      </expressions>
-      <v-notice text="仮判決β ➔ ${_mex}" order="1" duration="36" icon="β.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-    </t>
-
-    <t text="仮判決γ" sync="1A:[id8]:[mex] gains the effect of 最後の仮判決γ from  for 36.00 Seconds." notice="" >
-      <expressions>
-        <set name="debuff_type" value="c" />
-      </expressions>
-      <v-notice text="仮判決γ ➔ ${_mex}" order="1" duration="36" icon="γ.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-    </t>
-
-    <t text="仮判決δ" sync="1A:[id8]:[mex] gains the effect of 最後の仮判決δ from  for 36.00 Seconds." notice="" >
-      <expressions>
-        <set name="debuff_type" value="d" />
-      </expressions>
-      <v-notice text="仮判決δ ➔ ${_mex}" order="1" duration="36" icon="δ.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-    </t>
-    
-    <!--
-    @for(i = 0; i < 8; i++) {
-      if(Model.Player.InRole("DPS")) {
-        if(Model.Party[i].InRole("Tank", "Healer")) {
-          <t text="仮判決α" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決α from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="a" />
-            </expressions>
-          </t>
-          
-          <t text="仮判決β" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決β from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="b" />
-            </expressions>
-          </t>
-          
-          <t text="仮判決γ" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決γ from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="c" />
-            </expressions>
-          </t>
-          
-          <t text="仮判決δ" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決δ from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="d" />
-            </expressions>
-          </t>
-        }
-      } else {
-        if(Model.Party[i].InRole("DPS")) {
-          <t text="仮判決α" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決α from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="a" />
-            </expressions>
-          </t>
-          
-          <t text="仮判決β" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決β from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="b" />
-            </expressions>
-          </t>
-          
-          <t text="仮判決γ" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決γ from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="c" />
-            </expressions>
-          </t>
-          
-          <t text="仮判決δ" sync="1A:[id8]:[nex] gains the effect of 最後の仮判決δ from  for 36.00 Seconds." notice="" >
-            <expressions>
-              <pre name="debuff_type" value="d" />
-            </expressions>
-          </t>
-        }
-      }
-    }-->
-
-    <!-- 審判(自分先) -->
-    @if(Model.Player.InRole("DPS")) {
-      for(i = 0; i < 4; i++) {
-        <t text="審判α" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決α from  for 45.00 Seconds." notice="">
-          <expressions>
-            <pre name="judge_timing" value="odd" />
-            <pre name="debuff_type" value="a" />
-            <pre name="TABLE['TankHealerTable'][@i]['Name']" value=" ${_nex}" />
-          </expressions>
-          <v-notice text="審判α ➔ ${_nex}" order="2" duration="45" icon="α2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-        </t>
-        
-        <t text="審判β" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決β from  for 45.00 Seconds." notice="">
-          <expressions>
-            <pre name="judge_timing" value="odd" />
-            <pre name="debuff_type" value="b" />
-            <pre name="TABLE['TankHealerTable'][@i]['Name']" value=" ${_nex}" />
-          </expressions>
-          <v-notice text="審判β ➔ ${_nex}" order="2" duration="45" icon="β2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-        </t>
-        
-        <t text="審判γ" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決γ from  for 45.00 Seconds." notice="。">
-          <expressions>
-            <pre name="judge_timing" value="odd" />
-            <pre name="debuff_type" value="c" />
-            <pre name="TABLE['TankHealerTable'][@i]['Name']" value=" ${_nex}" />
-          </expressions>
-          <v-notice text="審判γ ➔ ${_nex}" order="2" duration="45" icon="γ2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-        </t>
-        
-        <t text="審判δ" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決δ from  for 45.00 Seconds." notice="">
-          <expressions>
-            <pre name="judge_timing" value="odd" />
-            <pre name="debuff_type" value="d" />
-            <pre name="TABLE['TankHealerTable'][@i]['Name']" value=" ${_nex}" />
-          </expressions>
-          <v-notice text="審判δ ➔ ${_nex}" order="2" duration="45" icon="δ2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-        </t>
-      }
-    } else {
-      for(i = 0; i < 4; i++) {
-        <t text="審判α" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決α from  for 45.00 Seconds." notice="">
-            <expressions>
-              <pre name="judge_timing" value="odd" />
-              <pre name="debuff_type" value="a" />
-              <pre name="TABLE['DPSTable'][@i]['Name']" value=" ${_nex}" />
-            </expressions>
-            <v-notice text="審判α ➔ ${_nex}" order="2" duration="45" icon="α2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-          </t>
-          
-          <t text="審判β" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決β from  for 45.00 Seconds." notice="">
-            <expressions>
-              <pre name="judge_timing" value="odd" />
-              <pre name="debuff_type" value="b" />
-              <pre name="TABLE['DPSTable'][@i]['Name']" value=" ${_nex}" />
-            </expressions>
-            <v-notice text="審判β ➔ ${_nex}" order="2" duration="45" icon="β2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-          </t>
-          
-          <t text="審判γ" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決γ from  for 45.00 Seconds." notice="。">
-            <expressions>
-              <pre name="judge_timing" value="odd" />
-              <pre name="debuff_type" value="c" />
-              <pre name="TABLE['DPSTable'][@i]['Name']" value=" ${_nex}" />
-            </expressions>
-            <v-notice text="審判γ ➔ ${_nex}" order="2" duration="45" icon="γ2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-          </t>
-          
-          <t text="審判δ" sync="1A:[id8]:[nex] gains the effect of 最後の審判：仮判決δ from  for 45.00 Seconds." notice="">
-            <expressions>
-              <pre name="judge_timing" value="odd" />
-              <pre name="debuff_type" value="d" />
-              <pre name="TABLE['DPSTable'][@i]['Name']" value=" ${_nex}" />
-            </expressions>
-            <v-notice text="審判δ ➔ ${_nex}" order="2" duration="45" icon="δ2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
-          </t>
         }
     }
-    
-    <!-- 審判(自分後) -->
-    <t no="1" text="審判α" sync="1A:[id8]:[mex] gains the effect of 最後の審判：仮判決α from  for 45.00 Seconds." notice="" sync-count="1" >
-      <expressions>
-        <pre name="judge_timing" value="even" />
-        <set name="debuff_type" value="a" />
-      </expressions>
-      <v-notice text="審判α ➔ ${_mex}" order="2" duration="45" icon="α2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
+    <!--最後の仮判決　解除-->
+    <!--自分-->
+    <t sync="[mex] loses the effect of 最後の仮判決α" notice="あるふぁ" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="none"/>
+        </expressions>
     </t>
-    
-    <t no="2" text="審判β" sync="1A:[id8]:[mex] gains the effect of 最後の審判：仮判決β from  for 45.00 Seconds." notice="" sync-count="1" >
-      <expressions>
-        <pre name="judge_timing" value="even" />
-        <set name="debuff_type" value="b" />
-      </expressions>
-      <v-notice text="審判β ➔ ${_mex}" order="2" duration="45" icon="β2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
+    <t sync="[mex] loses the effect of 最後の仮判決β" notice="べーた" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="none"/>
+        </expressions>
     </t>
-    
-    <t no="3" text="審判γ" sync="1A:[id8]:[mex] gains the effect of 最後の審判：仮判決γ from  for 45.00 Seconds." notice="。" sync-count="1" >
-      <expressions>
-        <pre name="judge_timing" value="even" />
-        <set name="debuff_type" value="c" />
-      </expressions>
-      <v-notice text="審判γ ➔ ${_mex}" order="2" duration="45" icon="γ2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
+    <t sync="[mex] loses the effect of 最後の仮判決γ" notice="がんま" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="none"/>
+        </expressions>
     </t>
-
-    <t no="4" text="審判δ" sync="1A:[id8]:[mex] gains the effect of 最後の審判：仮判決δ from  for 45.00 Seconds." notice="" sync-count="1" >
-      <expressions>
-        <pre name="judge_timing" value="even" />
-        <set name="debuff_type" value="d" />
-      </expressions>
-      <v-notice text="審判δ ➔ ${_mex}" order="2" duration="45" icon="δ2.png" sync-to-hide="ブルートジャスティスの「最後の審判：結審」" />
+    <t sync="[mex] loses the effect of 最後の仮判決δ" notice="でるた" notice-vol="0.0">
+        <expressions>
+            <set name="me_nisi_1" value="none"/>
+        </expressions>
     </t>
-    <!-- ジャッジメントナイサイ END -->
+    <!--他パーティーメンバー-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Party[i].Name!=Model.Player.Name){
+                //値をセットする
+                <t sync="@(Model.Party[i].Name) loses the effect of 最後の仮判決α" notice="あるふぁ" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="none"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) loses the effect of 最後の仮判決β" notice="べーた" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="none"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) loses the effect of 最後の仮判決γ" notice="がんま" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="none"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) loses the effect of 最後の仮判決δ" notice="でるた" notice-vol="0.0">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_1" value="none"/>
+                    </expressions>
+                </t>
+            }
+        }
+    }
+    <!--最後の審判-->
+    <!--自分-->
+    <t sync="[mex] gains the effect of 最後の審判：仮判決α" notice="あるふぁ" notice-vol="0.0" sync-count="1">
+        <expressions>
+            <set name="me_nisi_2" value="alpha"/>
+        </expressions>
+        <v-notice order="2" icon="alpha.png" duration="45" sync-to-hide="[mex] loses the effect of 最後の審判：仮判決α"/>
+    </t>
+    <t sync="[mex] gains the effect of 最後の審判：仮判決β" notice="べーた" notice-vol="0.0" sync-count="1">
+        <expressions>
+            <set name="me_nisi_2" value="beta"/>
+        </expressions>
+        <v-notice order="2" icon="beta.png" duration="45" sync-to-hide="[mex] loses the effect of 最後の審判：仮判決β"/>
+    </t>
+    <t sync="[mex] gains the effect of 最後の審判：仮判決γ" notice="がんま" notice-vol="0.0" sync-count="1">
+        <expressions>
+            <set name="me_nisi_2" value="gamma"/>
+        </expressions>
+        <v-notice order="2" icon="gamma.png" duration="45" sync-to-hide="[mex] loses the effect of 最後の審判：仮判決γ"/>
+    </t>
+    <t sync="[mex] gains the effect of 最後の審判：仮判決δ" notice="でるた" notice-vol="0.0" sync-count="1">
+        <expressions>
+            <set name="me_nisi_2" value="delta"/>
+        </expressions>
+        <v-notice order="2" icon="delta.png" duration="45" sync-to-hide="[mex] loses the effect of 最後の審判：仮判決δ"/>
+    </t>
+    <!--他パーティーメンバー-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Party[i].Name!=Model.Player.Name){
+                //値をセットする
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の審判：仮判決α" notice="あるふぁ" notice-vol="0.0" sync-count="1">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_2" value="alpha"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の審判：仮判決β" notice="べーた" notice-vol="0.0" sync-count="1">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_2" value="beta"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の審判：仮判決γ" notice="がんま" notice-vol="0.0" sync-count="1">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_2" value="gamma"/>
+                    </expressions>
+                </t>
+                <t sync="@(Model.Party[i].Name) gains the effect of 最後の審判：仮判決δ" notice="でるた" notice-vol="0.0" sync-count="1">
+                    <expressions>
+                        <set name="@(Model.Party[i].Job)_nisi_2" value="delta"/>
+                    </expressions>
+                </t>
+            }
+        }
+    }
+    <!--判定　受け渡し３回目-->
+    <!--自分がナイサイ無し-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Party[i].Name!=Model.Player.Name){
+                <t no="@(i+1)" sync="クルーズチェイサー starts using リミッターカット" notice="はんてい" notice-vol="0.0">
+                    <expressions>
+                        <pre name="@(Model.Party[i].Job)_nisi_1" value="VAR['me_nisi_2']"/>
+                    </expressions>
+                    <v-notice order="1" text="貰い先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                </t>
+            }
+        }
+    }
+    <!--自分がナイサイあり-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Player.InRole("DPS")){
+                if(Model.Party[i].InRole("HEALER")){
+                    <t no="@(i+11)" sync="クルーズチェイサー starts using リミッターカット" notice="はんてい" notice-vol="0.0">
+                        <expressions>
+                            <pre name="@(Model.Party[i].Job)_nisi_2" value="VAR['me_nisi_1']"/>
+                        </expressions>
+                        <v-notice order="2" text="渡し先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                    </t>
+                }else if(Model.Party[i].InRole("TANK")){
+                    <t no="@(i+11)" sync="クルーズチェイサー starts using リミッターカット" notice="はんてい" notice-vol="0.0">
+                        <expressions>
+                            <pre name="@(Model.Party[i].Job)_nisi_2" value="VAR['me_nisi_1']"/>
+                        </expressions>
+                        <v-notice order="2" text="渡し先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                    </t>
+                }
+            }else{
+                if(Model.Party[i].InRole("DPS")){
+                    <t no="@(i+11)" sync="クルーズチェイサー starts using リミッターカット" notice="はんてい" notice-vol="0.0">
+                        <expressions>
+                            <pre name="@(Model.Party[i].Job)_nisi_2" value="VAR['me_nisi_1']"/>
+                        </expressions>
+                        <v-notice order="2" text="渡し先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                    </t>
+                }
+            }
+        }
+    }
+    <!--判定　受け渡し４回目-->
+    <!--自分がナイサイ無し-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Party[i].Name!=Model.Player.Name){
+                <t no="@(i+1)" sync="クルーズチェイサー starts using プロペラウィンド" notice="はんてい" notice-vol="0.0">
+                    <expressions>
+                        <pre name="@(Model.Party[i].Job)_nisi_1" value="VAR['me_nisi_2']"/>
+                    </expressions>
+                    <v-notice  order="1" text="貰い先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                </t>
+            }
+        }
+    }
+    <!--自分がナイサイあり-->
+    @{
+        for(int i=0;i<8;i++){
+            if(Model.Player.InRole("DPS")){
+                if(Model.Party[i].InRole("HEALER")){
+                    <t no="@(i+11)" sync="クルーズチェイサー starts using プロペラウィンド" notice="はんてい" notice-vol="0.0">
+                        <expressions>
+                            <pre name="@(Model.Party[i].Job)_nisi_2" value="VAR['me_nisi_1']"/>
+                        </expressions>
+                        <v-notice order="2" text="渡し先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                    </t>
+                }else if(Model.Party[i].InRole("TANK")){
+                    <t no="@(i+11)" sync="クルーズチェイサー starts using プロペラウィンド" notice="はんてい" notice-vol="0.0">
+                        <expressions>
+                            <pre name="@(Model.Party[i].Job)_nisi_2" value="VAR['me_nisi_1']"/>
+                        </expressions>
+                        <v-notice order="2" text="渡し先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                    </t>
+                }
+            }else{
+                if(Model.Party[i].InRole("DPS")){
+                    <t no="@(i+11)" sync="クルーズチェイサー starts using プロペラウィンド" notice="はんてい" notice-vol="0.0">
+                        <expressions>
+                            <pre name="@(Model.Party[i].Job)_nisi_2" value="VAR['me_nisi_1']"/>
+                        </expressions>
+                        <v-notice order="2" text="渡し先 ➔ @Model.Party[i].Name" icon="@(Model.Party[i].Job).png" duration="18"/>
+                    </t>
+                }
+            }
+        }
+    }
 
     <!-- カウント -->
     <t name="カウント" sync="^1B:[id8]:[pc]:0000:[id4]:0041:" notice="カウント">
@@ -1373,6 +1338,7 @@
     <t text="散開！" sync="^14:488A:パーフェクト・アレキサンダー starts using 照準 on" notice="散開ー。">
       <v-notice order="0" duration="5" icon="SpreadB.png" />
     </t>
+    
     
     <t sync="^1B:[id8]:[pc]:0000:[id4]:003E" notice="" sync-count="1">
       <v-notice text="頭割 ➔ ${_pc}" job-icon="true" order="1" duration="3" />
