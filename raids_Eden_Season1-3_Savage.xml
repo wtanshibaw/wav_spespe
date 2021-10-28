@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>希望の園エデン零式：覚醒編3</name>
+  <rev>rev1</rev>
+  <description>
+    希望の園エデン零式：覚醒編3のタイムラインです。
+  </description>
+  <author>Sheeva Reactor,Aqua Cat,RINGS</author>
+  <license>CC BY-SA</license>
+  <zone>855</zone>
+  <locale>JA</locale>
+  <entry>P1</entry>
+  <start>0039:戦闘開始！</start>
+
+  <default target-element="Activity" target-attr="notice-d" value="Both" />
+  <default target-element="Activity" target-attr="notice-o" value="-3" />
+  <default target-element="Activity" target-attr="sync-s" value="-10" />
+  <default target-element="Activity" target-attr="sync-e" value="10" />
+
+  <s name="P1">
+    <a time="008" text="タイダルロア" sync="リヴァイアサンは「タイダルロア」を唱えた。" notice="タイダルロア。" icon="AllRangeAttack.png" />
+    <a time="018" text="リップカレント" sync="リヴァイアサンは「リップカレント」を唱えた。" notice="タンク強攻撃" icon="HardAttack.png" />
+    <a time="032" text="タイダルウェイブ" sync="リヴァイアサンは「タイダルウェイブ」の構え。" notice="ノックバック" icon="KnockBack.png" />
+    <a time="037" sync="リヴァイアサン:我がアギトは、岩をも砕く……！" />
+    <a time="037" text="エリア破壊" sync="リヴァイアサンは「アンダーシークエイク」の構え。" notice="アンダーシークエイク" icon="DamageShare.png" />
+    <a time="045" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント。" icon="Avoid.png" />
+    <a time="057" text="猛烈なる波動" sync="リヴァイアサンは「猛烈なる波動」を唱えた。" notice="中央集合。" icon="StackAOE.png" />
+    <a time="066" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント。" icon="Avoid.png" />
+    <a time="076" text="足場再生" sync="お、お待たせしました……！ 周囲のエーテルに干渉して、足場を再生します！" icon="Dialog.png" />
+    <a time="090" text="メイルシュトローム" sync="リヴァイアサンは「メイルシュトローム」を唱えた。" notice="次は、ダイブ2連続。" goto="P2" sync-s="-20" />
+  </s>
+
+  <s name="P2">
+    <!-- 大海嘯1回目用トリガ begin -->
+    <t text="断絶の兆し\n ➜ ${_nex}" sync="^1A:[id8]:[nex] gains the effect of 断絶の兆し from  for 8.00 Seconds." notice="ノックバックに注意。" icon="Attention.png" >
+      <v-notice
+        duration="8"
+        duration-visible="true"
+        job-icon="True"
+        order="-1" />
+    </t>
+
+    <t text="断絶の兆し\n ➜ 自分が対象" sync="^1A:[id8]:[mex] gains the effect of 断絶の兆し from  for 8.00 Seconds." notice="自分が対象。" icon="Attention.png" >
+      <v-notice
+        duration="8"
+        duration-visible="true"
+        job-icon="True"
+        order="-1" />
+    </t>
+    <!-- 大海嘯1回目用トリガ end -->
+
+    <a time="015" text="スピニングダイブ" sync="リヴァイアサンの「スピニングダイブ」" notice="" icon="AOEVertical.png" />
+    <a time="017" text="スピニングダイブ" notice="" icon="AOEHorizontal.png" />
+    <a time="023" text="タイダルロア" sync="リヴァイアサンは「タイダルロア」を唱えた。" notice="タイダルロア。" icon="AllRangeAttack.png" />
+    <a time="037" text="大海嘯➀" sync="リヴァイアサンは「大海嘯」の構え。" notice="大海嘯" icon="HardAllRangeAttack.png" />
+    <a time="056" text="ノックバック発動" notice="ノックバック、すぐに左右へ。" icon="KnockBack.png" />
+    <a time="056" text="エリア破壊" sync="リヴァイアサンは「アンダーシークエイク」の構え。" notice="" icon="Leave.png" />
+    <a time="064" sync="リーンの声:何度、壊されたって、エデンの力で……！" />
+    <a time="067" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント。" icon="Avoid.png" />
+    <a time="074" text="頭割り着弾" icon="DamageShare.png" />
+    <a time="079" text="タイダルロア" sync="リヴァイアサンは「タイダルロア」を唱えた。" notice="タイダルロア。" icon="AllRangeAttack.png" />
+    <a time="085" text="リップカレント" sync="リヴァイアサンは「リップカレント」を唱えた。" notice="タンク強攻撃" icon="HardAttack.png" />
+    <a time="095" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント。" icon="Avoid.png" />
+    <a time="104" text="足場再生" sync="リーンの声:足場の再生を行います……！" icon="Dialog.png" />
+    <a time="108" text="タイダルロア" sync="リヴァイアサンは「タイダルロア」を唱えた。" notice="タイダルロア。" icon="AllRangeAttack.png" />
+    <a time="130" text="水の覚醒" sync="リヴァイアサンは「水の覚醒」を唱えた。" notice="" goto="P3" sync-s="-20" />
+    <!-- 覚醒。ここからギミックが変化 -->
+  </s>
+
+  <s name="P3">
+    <!-- 覚醒後のテンポラリーカレント用トリガ begin -->
+    <t text="北：右 ➜ 左\n南：左 ➜ 右" sync="^14:3FEA:リヴァイアサン starts using テンポラリーカレント on リヴァイアサン." notice="すぐ反対へ移動" >
+      <v-notice
+        duration="5"
+        duration-visible="false"
+        icon="2.png"
+        order="-1" />
+    </t>
+
+    <t text="北：左 ➜ 右\n南：右 ➜ 左" sync="^14:3FEB:リヴァイアサン starts using テンポラリーカレント on リヴァイアサン." notice="すぐ反対へ移動" >
+      <v-notice
+        duration="5"
+        duration-visible="false"
+        icon="1.png"
+        order="-1" />
+    </t>
+    <!-- 覚醒後のテンポラリーカレント用トリガ end -->
+
+    <a time="011" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="018" text="タイダルウェイブ" sync="リヴァイアサンは「タイダルウェイブ」の構え。" notice="ノックバック" icon="KnockBack.png" />
+    <a time="024" text="左右エリア破壊" sync="リヴァイアサンは「アンダーシークエイク」の構え。" notice="アンダーシークエイク。" icon="DamageShare.png" />
+    <a time="033" text="カレント2連" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント2連続。" icon="Avoid.png" />
+    <a time="046" text="猛烈なる波動" sync="リヴァイアサンは「猛烈なる波動」を唱えた。" icon="StackAOE.png" />
+    <a time="056" text="カレント2連" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント2連続。" icon="Avoid.png" />
+    <a time="070" text="足場再生" sync="リーンの声:足場の再生を行います……！" icon="Dialog.png" />
+    <a time="078" text="フェーズ移行" sync="リヴァイアサンは「メイルシュトローム」を唱えた。" notice="次は、ダイブ3連続。" goto="P4" sync-s="-20" />
+  </s>
+
+  <s name="P4">
+    <t text="北：左 ➜ 右\n 南：右 ➜ 左" sync="^14:3FEA:リヴァイアサン starts using テンポラリーカレント on リヴァイアサン." notice="すぐ反対へ移動" >
+      <v-notice
+        duration="5"
+        duration-visible="false"
+        icon="2.png"
+        order="-1" />
+    </t>
+
+    <t text="北：左 ➜ 右\n 南：右 ➜ 左" sync="^14:3FEB:リヴァイアサン starts using テンポラリーカレント on リヴァイアサン." notice="すぐ反対へ移動" >
+      <v-notice
+        duration="5"
+        duration-visible="false"
+        icon="1.png"
+        order="-1" />
+    </t>
+
+    <t text="距離減衰マーカー\n ➜ ${_nex}" sync="^1B:[id8]:[nex]:0000:0000:0057:0000:0000:0000:" >
+      <v-notice
+        duration="5"
+        duration-visible="false"
+        job-icon="1.png"
+        order="-1" />
+    </t>
+
+    <t text="距離減衰マーカー\n ➜ 自分" sync="^1B:[id8]:[mex]:0000:0000:0057:0000:0000:0000:" notice="はなれるー。" >
+      <v-notice
+        duration="5"
+        duration-visible="false"
+        job-icon=""
+        order="-1" />
+    </t>
+
+    <a time="017" text="スピニングダイブ1" sync="リヴァイアサンの「スピニングダイブ」" notice="" icon="AOEVertical.png" />
+    <a time="019" text="スピニングダイブ2" notice="" icon="AOEHorizontal.png"/>
+    <a time="021" text="スピニングダイブ3" notice="" icon="AOEVertical.png" />
+  @if (Model.Player.InRole("RangeDPS","MagicDPS")) {
+    <a time="024" text="大時化セットアップ" notice="集合位置えー。" >
+      <v-notice
+        duration="6"
+        duration-visible="false"
+        icon="Stack.png"
+        order="-1" />
+    </a>
+  }
+
+    <a time="027" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="034" text="リップカレント" sync="リヴァイアサンは「リップカレント」を唱えた。" notice="タンク強攻撃" icon="HardAttack.png" />
+    <a time="050" text="大時化" sync="リヴァイアサンは「大時化」を唱えた。" notice="おおしけ、集合。" icon="StackAOE.png" />
+    <a time="062" text="距離減衰マーカー付与" icon="Marker.png" />
+    <a time="063" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント2連続。" icon="Avoid.png" />
+    <a time="075" text="頭割り" notice="頭割り" icon="DamageShare.png" />
+    <a time="084" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="094" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="114" text="猛烈なる波動" sync="リヴァイアサンは「猛烈なる波動」を唱えた。" notice="中央集合。AoEが出たら左右へ。" icon="StackAOE.png" />
+    <a time="124" text="左右エリア破壊" sync="リヴァイアサンは「アンダーシークエイク」の構え。" notice="マーカー消えたら中央へ。" />
+    <a time="132" text="大海嘯" sync="リヴァイアサンは「大海嘯」の構え。" notice="次は、大海嘯。" icon="HardAllRangeAttack.png" />
+
+    <!-- 大海嘯2回目用トリガ begin -->
+    <t text="強圧の兆し\n ➜ ${_nex}" sync="^1A:[id8]:[nex] gains the effect of 強圧の兆し from  for 8.00 Seconds." icon="Leave.png" >
+      <v-notice
+        duration="8"
+        duration-visible="true"
+        job-icon="True"
+        order="1" />
+    </t>
+
+    <t text="強圧の兆し\n ➜ 自分が対象" sync="^1A:[id8]:[mex] gains the effect of 強圧の兆し from  for 8.00 Seconds." notice="強圧の兆し。" icon="Attention.png" >
+      <v-notice
+        duration="8"
+        duration-visible="true"
+        job-icon="True"
+        order="1" />
+    </t>
+
+    <t text="断絶の兆し1\n ➜ ${_nex}" sync="^1A:[id8]:[nex] gains the effect of 断絶の兆し from  for 21.00 Seconds." icon="1.png" >
+      <v-notice
+        duration="21"
+        duration-visible="true"
+        job-icon="True"
+        order="2" />
+    </t>
+
+    <t text="断絶の兆し1\n ➜ 自分が対象" sync="^1A:[id8]:[mex] gains the effect of 断絶の兆し from  for 21.00 Seconds." notice="断絶1回目。" icon="1.png" >
+      <v-notice
+        duration="21"
+        duration-visible="true"
+        job-icon="True"
+        order="2" />
+    </t>
+
+    <t text="断絶の兆し2\n ➜ ${_nex}" sync="^1A:[id8]:[nex] gains the effect of 断絶の兆し from  for 25.00 Seconds." icon="2.png" >
+      <v-notice
+        duration="25"
+        duration-visible="true"
+        job-icon="True"
+        order="3" />
+    </t>
+
+    <t text="断絶の兆し2\n ➜ 自分が対象" sync="^1A:[id8]:[mex] gains the effect of 断絶の兆し from  for 25.00 Seconds." notice="断絶2回目。" icon="2.png" >
+      <v-notice
+        duration="25"
+        duration-visible="true"
+        job-icon="True"
+        order="3" />
+    </t>
+
+    <t text="暴風の兆し\n ➜ ${_nex}" sync="^1A:[id8]:[nex] gains the effect of 暴風の兆し from  for 29.00 Seconds." icon="AOE.png" >
+      <v-notice
+        duration="29"
+        duration-visible="true"
+        job-icon="True"
+        order="4" />
+    </t>
+
+    <t text="暴風の兆し\n ➜ 自分が対象" sync="^1A:[id8]:[mex] gains the effect of 断絶の兆し from  for 25.00 Seconds." notice="ノックバック後に離れる。" icon="AOE.png" >
+      <v-notice
+        duration="29"
+        duration-visible="true"
+        job-icon="True"
+        order="4" />
+    </t>
+    <!-- 大海嘯2回目用トリガ end -->
+
+    <a time="145" text="デバフに注意" icon="Attention.png" />
+    <a time="152" text="ノックバック" notice="前からノックバック。" icon="KnockBack.png" />
+    <a time="157" text="頭割りx2" notice="分かれて頭割り。" icon="DamageShare.png" />
+    <a time="159" text="拡散" icon="Targetaoe03.png" />
+    <a time="165" text="DPSノックバック" notice="前からノックバック。" icon="KnockBack.png" />
+    <a time="169" text="後ろからノックバック" notice="前にノックバック。戻らない。" icon="KnockBack.png" />
+    <a time="173" text="暴風" icon="AoE.png" />
+    <a time="176" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント2連続。" icon="Avoid.png" />
+    <a time="195" text="足場再生" sync="リーンの声:足場の再生を行います……！" goto="P5" sync-s="-20" icon="Dialog.png" />
+  </s>
+
+
+  <s name="P5">
+    <a time="004" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="016" text="タイダルレイジ" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="023" text="リップカレント" sync="リヴァイアサンは「リップカレント」を唱えた。" notice="リップカレント。" icon="HardAttack.png" />
+    <a time="031" text="苛烈なる波動" sync="リヴァイアサンは「苛烈なる波動」を唱えた。" notice="中央集合。" icon="StackAOE.png" />
+    <a time="038" text="中央エリア破壊" sync="リヴァイアサンは「アンダーシークエイク」の構え。" notice="アンダーシークエイク。" icon="Leave.png" />
+    <a time="042" text="タンク離れる" icon="Distance.png" />
+    <a time="042" text="DPSとヒラ頭割り" icon="DamageShare.png" />
+    <a time="047" text="ブラックスモーカー" sync="リヴァイアサンは「ブラックスモーカー」を唱えた。" notice="ブラックスモーカー。" icon="Leave.png" />
+    <a time="048" text="線誘導開始" icon="FallingObject.png" />
+    <a time="052" text="タンクに連続攻撃" notice="タンクに連続攻撃" icon="HardAttack.png" />
+    <a time="061" text="AoE x4" notice="床処理。" icon="Targetaoe.png" />
+    <a time="064" text="AoE x3" icon="Targetaoe.png" />
+    <a time="067" text="AoE x2" icon="Targetaoe.png" />
+    <a time="070" text="AoE x1" icon="Targetaoe.png" />
+    <a time="073" text="カレント" sync="リヴァイアサンは「テンポラリーカレント」の構え。" notice="テンポラリーカレント2連続。" icon="Avoid.png" />
+    <a time="077" text="スプリント" notice="スプリント" icon="Avoid.png" />
+    <a time="082" text="カレント2回目" icon="Avoid.png" />
+    <a time="090" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="097" text="足場再生" sync="リーンの声:足場の再生を行います……！" icon="Dialog.png" />
+    <a time="101" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="118" text="沈溺の波動" sync="リヴァイアサンは「沈溺の波動」を唱えた。" notice="沈溺の波動。" />
+    <a time="131" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="140" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="148" text="タイダルレイジ" sync="リヴァイアサンは「タイダルレイジ」を唱えた。" notice="タイダルレイジ。" icon="AllRangeAttack.png" />
+    <a time="156" text="最終詠唱" sync="リヴァイアサンは「混沌の渦動」を唱えた。" notice="もうすぐ時間切れ。" />
+    <a time="169" sync="リヴァイアサン:死ノ底ニ沈メ……！！" />
+    <a time="177" text="時間切れ" icon="Timeout.png" />
+  </s>
+</timeline>
