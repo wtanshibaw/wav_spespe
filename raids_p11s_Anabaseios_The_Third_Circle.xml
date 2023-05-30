@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<timeline>
+  <name>万魔殿パンデモニウム零式：天獄編1層</name>
+  <rev>beta</rev>
+  <description>
+    
+  </description>
+  <author>デカ宮波太郎 by @mortal__ray</author>
+  <zone>XX</zone>
+  <locale>JA</locale>
+  <entry>phase1</entry>
+  
+  <s name="phase1">
+    <a time="000" text="" sync="" />
+    <t sync="">
+      <v-notice text="" icon="" duration="10" />
+    </t>
+  </s>
+</timeline>
