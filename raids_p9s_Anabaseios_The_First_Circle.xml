@@ -12,7 +12,11 @@
   <entry>phase1</entry>
   
   <s name="phase1">
-    <a time="000.0" sync="コキュートス:タタカウ……古キ魂、喰ッテ、タタカウ……！" />
+    <a time="000.0" sync="コキュートス:タタカウ……古キ魂、喰ッテ、タタカウ……！">
+      <expressions>
+        <set name="beast_target_count" value="0" />
+      </expressions>
+    </a>
     <a time="006.0" text="グラトニーズアーガー" sync="コキュートスは「グラトニーズアーガー」を唱えた。" notice="次は、グラトニーズアーガー。" />
     <a time="011.0" text="グラトニーズアーガー" sync="コキュートスの「グラトニーズアーガー」" />
     <a time="020.0" text="魂喰らい" sync="コキュートスは「魂喰らい」の構え。" notice="次は、魂喰らい。" />
@@ -22,13 +26,13 @@
     <a time="041.0" text="デストゥワイス" sync="コキュートスは「デストゥワイス」を唱えた。" notice="次は、デストゥワイス。" />
     <a time="046.0" text="デストゥワイス" sync="コキュートスの「デストゥワイス」" />
     <a time="054.0" sync="メイガス・コキュートス:二重詠唱の驚異、味わいなさい！" />
-    <a time="054.0" text="ダブルスペル" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
-    <a time="060.0" text="ダブルスペル" sync="コキュートスの「ダブルスペル」" />
-    <a time="067.0" text="ダブルスペル" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
-    <a time="073.0" text="ダブルスペル" sync="コキュートスの「ダブルスペル」" />
+    <a time="054.0" text="ダブルスペル1" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
+    <a time="060.0" text="ダブルスペル1" sync="コキュートスの「ダブルスペル」" />
+    <a time="067.0" text="ダブルスペル2" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
+    <a time="073.0" text="ダブルスペル2" sync="コキュートスの「ダブルスペル」" />
     <a time="080.0" sync="メイガス・コキュートス:ほーら、踊ってもらうわよ！" />
-    <a time="080.0" text="ダブルスペル" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
-    <a time="086.0" text="ダブルスペル" sync="コキュートスの「ダブルスペル」" />
+    <a time="080.0" text="ダブルスペル3" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
+    <a time="086.0" text="ダブルスペル3" sync="コキュートスの「ダブルスペル」" />
     <a time="101.0" sync="メイガス・コキュートス:出番は終わり……みたいね……。" />
     <a time="104.0" text="ソウルリバース" sync="コキュートスの「ソウルリバース」" notice="次は、ソウルリバース。" />
     <a time="109.0" text="魂喰らい" sync="コキュートスは「魂喰らい」の構え。" notice="次は、魂喰らい。" />
@@ -40,8 +44,8 @@
     <a time="140.0" text="古式地烈斬" sync="コキュートスは「古式地烈斬」の構え。" notice="次は、古式地烈斬。" />
     <a time="146.0" text="古式地烈斬" sync="コキュートスの「古式地烈斬」" />
     <a time="148.0" sync="マーシャリスト・コキュートス:吹っ飛ばしてやる！" />
-    <a time="148.0" text="前方連転脚" sync="コキュートスは「前方連転脚」の構え。" notice="次は、前方連転脚。" />
-    <a time="154.0" text="前方連転脚" sync="コキュートスの「前方連転脚」" />
+    <a time="148.0" text="連転脚" sync="コキュートスは「(前方|後方)連転脚」の構え。" notice="次は、連転脚。" />
+    <a time="154.0" text="連転脚" sync="コキュートスの「(前方|後方)連転脚」" />
     <a time="164.0" text="古式破砕拳" sync="コキュートスは「古式破砕拳」の構え。" notice="次は、古式破砕拳。" />
     <a time="169.0" text="古式破砕拳" sync="コキュートスの「古式破砕拳」" />
     <a time="170.0" text="グラトニーズアーガー" sync="コキュートスは「グラトニーズアーガー」を唱えた。" notice="次は、グラトニーズアーガー。" />
@@ -56,13 +60,40 @@
     <a time="223.0" text="ジャンブルコンボ" sync="コキュートスは「ジャンブルコンボ」の構え。" notice="次は、ジャンブルコンボ。" />
     <a time="236.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
     <a time="238.0" text="炎魔衝" sync="コキュートスの「炎魔衝」" notice="次は、炎魔衝。" />
-    <a time="238.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
+    <a time="239.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
     <a time="239.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
-    <a time="241.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
+    <a time="242.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
     <a time="244.0" text="炎魔衝" sync="コキュートスの「炎魔衝」" notice="次は、炎魔衝。" />
     <a time="244.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
-    <a time="244.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
+    <a time="245.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
+    <a time="248.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
+    <a time="250.0" text="炎魔衝" sync="コキュートスの「炎魔衝」" notice="次は、炎魔衝。" />
+    <a time="250.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
+    <a time="250.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
+    <a time="253.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
+    <a time="255.0" text="炎魔衝" sync="コキュートスの「炎魔衝」" notice="次は、炎魔衝。" />
+    <a time="256.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
+    <a time="256.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
     <a time="257.0" text="セリフ：Phase移行" sync="キメリック・コキュートス:アテナ様のために……！" />
+    
+    <!-- 前方／後方 -->
+    <t sync="コキュートスは「前方連転脚」の構え。">
+      <v-notice text="後安置" image="下6安置.png" duration="10" />
+    </t>
+    
+    <t sync="コキュートスは「後方連転脚」の構え。">
+      <v-notice text="前安置" image="上12安置.png" duration="10" />
+    </t>
+    
+    <!-- ダブルスペル 内安置 -->
+    <t sync="15:[id8]:コキュートス:(8122|815C):unknown_8122:[id8]:コキュートス:">
+      <v-notice text="外側安置" image="離れる.png" duration="10" />
+    </t>
+    
+    <!-- ダブルスペル 外安置 -->
+    <t sync="15:[id8]:コキュートス:8123:unknown_8122:[id8]:コキュートス:">
+      <v-notice text="内側安置" image="近づく.png" duration="10" />
+    </t>
     
     <!--マーカーセット-->
     <t sync="^1B:[id8]:[pc]:0000:[id4]:(?&lt;marker&gt;[0-9a-fA-F]{4}):" sync-count="1" >
@@ -85,16 +116,16 @@
     
     <!--サイコロ -->
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 388, X4):" notice="2番" >
-      <v-notice text="２番" icon="サイコロ2.png" duration="30" />
+      <v-notice text="２番\n➔誘導1回目、塔3回目" icon="サイコロ2.png" duration="30" />
     </t>
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 386, X4):" notice="4番" >
-      <v-notice text="４番" icon="サイコロ4.png" duration="30" />
+      <v-notice text="４番\n➔誘導2回目、塔4回目" icon="サイコロ4.png" duration="30" />
     </t>
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 384, X4):" notice="6番" >
-      <v-notice text="６番" icon="サイコロ6.png" duration="30" />
+      <v-notice text="６番\n➔誘導3回目、塔1回目" icon="サイコロ6.png" duration="30" />
     </t>
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 382, X4):" notice="8番" >
-      <v-notice text="８番" icon="サイコロ8.png" duration="30" />
+      <v-notice text="８番\n➔誘導4回目、塔2回目" icon="サイコロ8.png" duration="30" />
     </t>
     
     <!--移行-->
