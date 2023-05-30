@@ -14,7 +14,7 @@
   <s name="phase1">
     <a time="000.0" sync="コキュートス:タタカウ……古キ魂、喰ッテ、タタカウ……！">
       <expressions>
-        <set name="beast_target_count" value="0" />
+        <set name="blue_target_count" value="0" />
       </expressions>
     </a>
     <a time="006.0" text="グラトニーズアーガー" sync="コキュートスは「グラトニーズアーガー」を唱えた。" notice="次は、グラトニーズアーガー。" />
