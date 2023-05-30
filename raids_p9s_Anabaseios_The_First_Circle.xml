@@ -6,14 +6,102 @@
     
   </description>
   <author>デカ宮波太郎</author>
-  <zone>XX</zone>
+  <license>デカ宮波太郎</license>
+  <zone>1148</zone>
   <locale>JA</locale>
   <entry>phase1</entry>
   
   <s name="phase1">
-    <a time="000" text="" sync="" />
-    <t sync="">
-      <v-notice text="" icon="" duration="10" />
+    <a time="000.0" sync="コキュートス:タタカウ……古キ魂、喰ッテ、タタカウ……！" />
+    <a time="006.0" text="グラトニーズアーガー" sync="コキュートスは「グラトニーズアーガー」を唱えた。" notice="次は、グラトニーズアーガー。" />
+    <a time="011.0" text="グラトニーズアーガー" sync="コキュートスの「グラトニーズアーガー」" />
+    <a time="020.0" text="魂喰らい" sync="コキュートスは「魂喰らい」の構え。" notice="次は、魂喰らい。" />
+    <a time="031.0" text="魂喰らい" sync="コキュートスの「魂喰らい」" />
+    <a time="033.0" sync="メイガス・コキュートス:アタシは死んだはず…… 戦い続ける運命なのね" />
+    <a time="040.0" sync="メイガス・コキュートス:アタシの魔法を受けてみなさい！" />
+    <a time="041.0" text="デストゥワイス" sync="コキュートスは「デストゥワイス」を唱えた。" notice="次は、デストゥワイス。" />
+    <a time="046.0" text="デストゥワイス" sync="コキュートスの「デストゥワイス」" />
+    <a time="054.0" sync="メイガス・コキュートス:二重詠唱の驚異、味わいなさい！" />
+    <a time="054.0" text="ダブルスペル" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
+    <a time="060.0" text="ダブルスペル" sync="コキュートスの「ダブルスペル」" />
+    <a time="067.0" text="ダブルスペル" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
+    <a time="073.0" text="ダブルスペル" sync="コキュートスの「ダブルスペル」" />
+    <a time="080.0" sync="メイガス・コキュートス:ほーら、踊ってもらうわよ！" />
+    <a time="080.0" text="ダブルスペル" sync="コキュートスは「ダブルスペル」を唱えた。" notice="次は、ダブルスペル。" />
+    <a time="086.0" text="ダブルスペル" sync="コキュートスの「ダブルスペル」" />
+    <a time="101.0" sync="メイガス・コキュートス:出番は終わり……みたいね……。" />
+    <a time="104.0" text="ソウルリバース" sync="コキュートスの「ソウルリバース」" notice="次は、ソウルリバース。" />
+    <a time="109.0" text="魂喰らい" sync="コキュートスは「魂喰らい」の構え。" notice="次は、魂喰らい。" />
+    <a time="120.0" text="魂喰らい" sync="コキュートスの「魂喰らい」" />
+    <a time="122.0" sync="マーシャリスト・コキュートス:闘うために呼ばれるとは…… いいぜ、暴れてやる！" />
+    <a time="128.0" text="穿昇拳" sync="コキュートスは「穿昇拳」の構え。" notice="次は、穿昇拳。" />
+    <a time="133.0" text="穿昇拳" sync="コキュートスの「穿昇拳」" />
+    <a time="140.0" sync="マーシャリスト・コキュートス:せいぜい、楽しませてくれよ！" />
+    <a time="140.0" text="古式地烈斬" sync="コキュートスは「古式地烈斬」の構え。" notice="次は、古式地烈斬。" />
+    <a time="146.0" text="古式地烈斬" sync="コキュートスの「古式地烈斬」" />
+    <a time="148.0" sync="マーシャリスト・コキュートス:吹っ飛ばしてやる！" />
+    <a time="148.0" text="前方連転脚" sync="コキュートスは「前方連転脚」の構え。" notice="次は、前方連転脚。" />
+    <a time="154.0" text="前方連転脚" sync="コキュートスの「前方連転脚」" />
+    <a time="164.0" text="古式破砕拳" sync="コキュートスは「古式破砕拳」の構え。" notice="次は、古式破砕拳。" />
+    <a time="169.0" text="古式破砕拳" sync="コキュートスの「古式破砕拳」" />
+    <a time="170.0" text="グラトニーズアーガー" sync="コキュートスは「グラトニーズアーガー」を唱えた。" notice="次は、グラトニーズアーガー。" />
+    <a time="175.0" text="グラトニーズアーガー" sync="コキュートスの「グラトニーズアーガー」" />
+    <a time="181.0" text="穿昇拳" sync="コキュートスは「穿昇拳」の構え。" notice="次は、穿昇拳。" />
+    <a time="193.0" sync="マーシャリスト・コキュートス:チィ……時間切れかよ……！" />
+    <a time="214.0" text="魂喰らい" sync="コキュートスの「魂喰らい」" />
+    <a time="216.0" sync="キメリック・コキュートス:まだまだぁ！" />
+    <a time="216.0" text="サモンライトニング" sync="コキュートスは「サモンライトニング」を唱えた。" notice="次は、サモンライトニング。" />
+    <a time="221.0" text="サモンライトニング" sync="コキュートスの「サモンライトニング」" />
+    <a time="222.0" sync="キメリック・コキュートス:その身に苦痛を！" />
+    <a time="223.0" text="ジャンブルコンボ" sync="コキュートスは「ジャンブルコンボ」の構え。" notice="次は、ジャンブルコンボ。" />
+    <a time="236.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
+    <a time="238.0" text="炎魔衝" sync="コキュートスの「炎魔衝」" notice="次は、炎魔衝。" />
+    <a time="238.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
+    <a time="239.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
+    <a time="241.0" text="放電" sync="雷球の「放電」" notice="次は、放電。" />
+    <a time="244.0" text="炎魔衝" sync="コキュートスの「炎魔衝」" notice="次は、炎魔衝。" />
+    <a time="244.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
+    <a time="244.0" text="放電" sync="コキュートスの「放電」" notice="次は、放電。" />
+    <a time="257.0" text="セリフ：Phase移行" sync="キメリック・コキュートス:アテナ様のために……！" />
+    
+    <!--マーカーセット-->
+    <t sync="^1B:[id8]:[pc]:0000:[id4]:(?&lt;marker&gt;[0-9a-fA-F]{4}):" sync-count="1" >
+      <expressions>
+        <set name="marker_origin" value="0x${marker}" scope="CurrentZone" />
+      </expressions>
     </t>
+    
+    <!-- 青マーカーの回数カウント -->
+    <t no="1" name="カウント" sync="^1B:[id8]:[pc]:0000:[id4]:EVAL(VAR['marker_origin'] - 138, X4):" sync-interval="1">
+      <expressions>
+        <set name="blue_target_count" value="EVAL(VAR['blue_target_count']+1,N0)" />
+      </expressions>
+    </t>
+    
+    <!-- カウントを通知 -->
+    <t no="2" sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 138, X4):" sync-count="1" notice="VAR['blue_target_count']回目">
+      <v-notice text="VAR['blue_target_count']回目：" duration="10" />
+    </t>
+    
+    <!--サイコロ -->
+    <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 388, X4):" notice="2番" >
+      <v-notice text="２番" icon="サイコロ2.png" duration="30" />
+    </t>
+    <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 386, X4):" notice="4番" >
+      <v-notice text="４番" icon="サイコロ4.png" duration="30" />
+    </t>
+    <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 384, X4):" notice="6番" >
+      <v-notice text="６番" icon="サイコロ6.png" duration="30" />
+    </t>
+    <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 382, X4):" notice="8番" >
+      <v-notice text="８番" icon="サイコロ8.png" duration="30" />
+    </t>
+    
+    <!--移行-->
+    <t sync="キメリック・コキュートス:アテナ様のために……！" goto="phase2" />
+  </s>
+  
+  <s name="phase2">
+  
   </s>
 </timeline>
