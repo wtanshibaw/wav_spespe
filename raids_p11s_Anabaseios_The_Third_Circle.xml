@@ -2,14 +2,13 @@
 <timeline>
   <name>万魔殿パンデモニウム零式：天獄編3層</name>
   <rev>beta</rev>
-  <description>
-    
-  </description>
+  <description></description>
   <author>デカ宮波太郎</author>
   <license>デカ宮波太郎</license>
   <zone>114A</zone>
   <locale>JA</locale>
   <entry>phase1</entry>
+  <start>0039::戦闘開始！</start>
   
   <s name="phase1">
     <a time="000" text="" sync="" />
