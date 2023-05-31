@@ -8,17 +8,14 @@
   </description>
   <author>デカ宮波太郎</author>
   <license>デカ宮波太郎</license>
-  <zone>1148</zone>
+  <zone>Anabaseios: The First Circle (Savage)</zone>
   <locale>JA</locale>
   <entry>Phase1</entry>
+  <start>0039::戦闘開始！</start>
   
   <!-- Phase1 -->
   <s name="Phase1">
-    <a time="000.0" sync="コキュートス:タタカウ……古キ魂、喰ッテ、タタカウ……！">
-      <expressions>
-        <set name="blue_target_count" value="0" />
-      </expressions>
-    </a>
+    <a time="000.0" sync="コキュートス:タタカウ……古キ魂、喰ッテ、タタカウ……！" />
     <a time="006.0" text="全体攻撃" sync="コキュートスは「グラトニーズアーガー」を唱えた。" notice="次は、グラトニーズアーガー。" />
     <a time="011.0" text="全体攻撃" sync="コキュートスの「グラトニーズアーガー」" />
     <a time="020.0" text="魂喰らい" sync="コキュートスは「魂喰らい」の構え。" notice="次は、魂喰らい。" />
@@ -58,7 +55,11 @@
     <a time="181.0" text="穿昇拳" sync="コキュートスは「穿昇拳」の構え。" notice="次は、穿昇拳。" />
     <a time="193.0" text="セリフ" sync="マーシャリスト・コキュートス:チィ……時間切れかよ……！" />
     <a time="214.0" text="魂喰らい" sync="コキュートスの「魂喰らい」" />
-    <a time="216.0" text="セリフ" sync="キメリック・コキュートス:まだまだぁ！" />
+    <a time="216.0" text="セリフ" sync="キメリック・コキュートス:まだまだぁ！">
+      <expressions>
+        <set name="blue_target_count" value="0" />
+      </expressions>
+    </a>
     
     <!--移行-->
     <t sync="キメリック・コキュートス:まだまだぁ！" goto="DicePhase1" />
@@ -110,16 +111,16 @@
     
     <!--サイコロ -->
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 388, X4):" notice="2番" >
-      <v-notice text="２番\n➔誘導1回目、塔3回目" icon="サイコロ2.png" duration="30" />
+      <v-notice text="２番\n➔誘導1回目、塔3回目" icon="サイコロ2.png" duration="30" order="-99" />
     </t>
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 386, X4):" notice="4番" >
-      <v-notice text="４番\n➔誘導2回目、塔4回目" icon="サイコロ4.png" duration="30" />
+      <v-notice text="４番\n➔誘導2回目、塔4回目" icon="サイコロ4.png" duration="30" order="-99" />
     </t>
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 384, X4):" notice="6番" >
-      <v-notice text="６番\n➔塔1回目、誘導3回目" icon="サイコロ6.png" duration="30" />
+      <v-notice text="６番\n➔塔1回目、誘導3回目" icon="サイコロ6.png" duration="30" order="-99" />
     </t>
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 382, X4):" notice="8番" >
-      <v-notice text="８番\n➔塔2回目、誘導4回目" icon="サイコロ8.png" duration="30" />
+      <v-notice text="８番\n➔塔2回目、誘導4回目" icon="サイコロ8.png" duration="30" order="-99" />
     </t>
   </s>
 
@@ -138,19 +139,13 @@
     <a time="052.0" text="コメット" sync="コキュートスの「コメット」" />
     <a time="055.0" text="ビーストバイル" sync="コキュートスは「ビーストバイル」の構え。" notice="次は、ビーストバイル。" />
     <a time="061.0" text="ビーストバイル" sync="コキュートスの「ビーストバイル」" />
-    <a time="062.0" text="サンダーボルト" sync="コキュートスは「サンダーボルト」の構え。" notice="次は、サンダーボルト。">
-    </a>
-
+    <a time="062.0" text="サンダーボルト" sync="コキュートスは「サンダーボルト」の構え。" notice="次は、サンダーボルト。" />
     <a time="066.0" text="サンダーボルト" sync="コキュートスの「サンダーボルト」" />
-    <a time="069.0" text="サンダーボルト" sync="コキュートスは「サンダーボルト」の構え。" notice="次は、サンダーボルト。">
-    </a>
+    <a time="069.0" text="サンダーボルト" sync="コキュートスは「サンダーボルト」の構え。" notice="次は、サンダーボルト。" />
     <a time="072.0" text="サンダーボルト" sync="コキュートスの「サンダーボルト」" />
     <a time="076.0" text="セリフ" sync="ビースト・コキュートス:グガァァァッ！" />
-    <a time="076.0" text="エクリプスメテオ" sync="コキュートスは「エクリプスメテオ」の構え。" notice="次は、エクリプスメテオ。">
-      <v-notice text="マーカーの無いコメットへ" icon="注意.png" duration="7" order="-99" />
-    </a>
-    <a time="083.0" text="エクリプスメテオ" sync="コキュートスの「エクリプスメテオ」">
-    </a>
+    <a time="076.0" text="エクリプスメテオ" sync="コキュートスは「エクリプスメテオ」の構え。" notice="次は、エクリプスメテオ。" />
+    <a time="083.0" text="エクリプスメテオ" sync="コキュートスの「エクリプスメテオ」" />
     <a time="091.0" text="ビーストフューリー" sync="コキュートスは「ビーストフューリー」の構え。" notice="次は、ビーストフューリー。" />
     <a time="097.0" text="ビーストフューリー" sync="コキュートスの「ビーストフューリー」" />
     <a time="099.0" text="ソウルリバース" sync="コキュートスの「ソウルリバース」" notice="次は、ソウルリバース。" />
@@ -172,7 +167,7 @@
 
   <s name="DicePhase2">
     <a time="000.0" text="キメリックコンボ" sync="コキュートスの「キメリックコンボ」" />
-    <a time="006.0" text="前方炎連撃" sync="コキュートスは「前方炎連撃」の構え。" notice="次は、前方炎連撃。" />
+    <a time="006.0" text="炎連撃" sync="コキュートスは「(前方|後方)炎連撃」の構え。" notice="次は、前方炎連撃。" />
     <a time="010.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
     <a time="013.0" text="氷魔衝" sync="コキュートスの幻影の「氷魔衝」" notice="次は、氷魔衝。" />
     <a time="015.0" text="重炎撃" sync="コキュートスの「重炎撃」" notice="次は、重炎撃。" />
