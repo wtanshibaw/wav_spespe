@@ -199,12 +199,12 @@
     
     <!-- サイコロ3番 -->
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 387, X4):" notice="3番" >
-      <v-notice text="3番➔Ａで待機➔Ｂ端へ" icon="サイコロ2.png" duration="20" order="-99" />
+      <v-notice text="3番➔Ａで待機➔Ｂ端へ" icon="サイコロ3.png" duration="20" order="-99" />
     </t>
     
     <!-- サイコロ4番 -->
     <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 386, X4):" notice="4番" >
-      <v-notice text="3番➔Ａで待機➔Ｄ端へ" icon="サイコロ2.png" duration="20" order="-99" />
+      <v-notice text="4番➔Ａで待機➔Ｄ端へ" icon="サイコロ4.png" duration="20" order="-99" />
     </t>
     
     <!--無職-->
