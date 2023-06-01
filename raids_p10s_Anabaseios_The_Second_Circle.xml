@@ -80,21 +80,21 @@
     
     <!-- 1回目パンデモニックボンド -->
     <!-- クアドラ -->
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3696_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 22.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*22.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="4人で頭割り➔散開" icon="散開A.png" duration="25" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3696_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 25.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*25.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="散開➔4人で頭割り" icon="真.png" duration="25" order="-98"/>
     </t>
     
     <!-- ダブル -->
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3551_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 22.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*22.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="ペアで頭割り➔散開" icon="真.png" duration="25" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3551_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 25.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*25.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="散開➔ペアで頭割り" icon="真.png" duration="25" order="-98"/>
     </t>
@@ -147,11 +147,11 @@
     
     <!-- 2回目パンデモニックボンド -->
     <!-- 先頭割り -->
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3551_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 38.00 Seconds. BuffID: 0DDE-00">
+    <t sync="^1A:[id8]:[pc] gains the effect.*38.00 Seconds. BuffID: 0DDE-00">
       <v-notice text="ペアで頭割り➔散開" icon="真.png" duration="25" order="-98"/>
     </t>
     <!-- 後頭割り -->
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3551_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 41.00 Seconds. BuffID: 0DDE-00">
+    <t sync="^1A:[id8]:[pc] gains the effect.*41.00 Seconds. BuffID: 0DDE-00">
       <v-notice text="散開➔ペアで頭割り" icon="真.png" duration="25" order="-98"/>
     </t>
   </s>
@@ -169,21 +169,21 @@
     
     <!-- 3回目パンデモニックボンド -->
     <!-- クアドラ -->
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3696_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 32.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*32.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="4人で頭割り➔散開" icon="散開A.png" duration="35" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3696_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 35.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*35.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="散開➔4人で頭割り" icon="真.png" duration="35" order="-98"/>
     </t>
     
     <!-- ダブル -->
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3551_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 32.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*32.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="ペアで頭割り➔散開" icon="真.png" duration="35" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect of _rsv_3551_-1_0_0_0_S74CFC3B0_E74CFC3B0 from  for 35.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="^1A:[id8]:[pc] gains the effect.*35.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="散開➔ペアで頭割り" icon="真.png" duration="35" order="-98"/>
     </t>
