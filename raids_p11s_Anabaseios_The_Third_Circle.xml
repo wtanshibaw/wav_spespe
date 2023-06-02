@@ -5,15 +5,46 @@
   <description></description>
   <author>デカ宮波太郎</author>
   <license>デカ宮波太郎</license>
-  <zone>114A</zone>
+  <zone>Anabaseios: The Eleventh Circle (Savage)</zone>
   <locale>JA</locale>
-  <entry>phase1</entry>
   <start>0039::戦闘開始！</start>
-  
-  <s name="phase1">
-    <a time="000" text="" sync="" />
-    <t sync="">
-      <v-notice text="" icon="" duration="10" />
-    </t>
-  </s>
+  <!-- ジューリー光 -->
+  <t sync="^14:81E6:">
+    <v-notice text="8方向散開\n➔タケノコ\n➔4-4頭割り" duration="15" order="-99" />
+  </t>
+  <!-- ジューリー闇 -->
+  <t sync="^14:81E7:">
+    <v-notice text="8方向散開\n➔タケノコ\n➔2-2-2-2頭割り" duration="15" order="-99" />
+  </t>
+  <!-- アップヘルド光 -->
+  <t sync="^14:87D3:">
+    <v-notice text="中央集合\n➔頭割り\n➔左右で4-4頭割り" duration="12" order="-99" />
+  </t>
+  <!-- アップヘルド闇 -->
+  <t sync="^14:87D4:">
+    <v-notice text="外周散開\n➔中央円範囲攻撃\n➔2-2-2-2頭割り"  duration="12" order="-99" />
+  </t>
+  <!-- ディバイド光 -->
+  <t sync="^14:81EC:">
+    <v-notice text="攻撃広がる\n➔4-4頭割り" duration="12" order="-99" />
+  </t>
+  <!-- ディバイド闇 -->
+  <t sync="^14:81ED:">
+    <v-notice text="外安置\n➔内安置\n➔2-2-2-2頭割り" duration="12" order="-99" />
+  </t>
+  <!-- ディスミサル光 -->
+  <t sync="^14:8788:">
+    <v-notice text="ノックバック\n➔外で4-4頭割り" duration="12" order="-99" />
+  </t>
+  <!-- ディスミサル闇 -->
+  <t sync="^14:8789:">
+    <v-notice text="ノックバック\n➔内で2-2-2-2頭割り" duration="12" order="-99" />
+  </t>
+  <t sync="[mex]に「闇の判紋" sync-count="1">
+    <v-notice text="←へ" duration="10" order="-99" />
+  </t>
+  <t sync="[mex]に「光の判紋" sync-count="1">
+    <v-notice text="→へ" duration="10" order="-99" />
+  </t>
+   
 </timeline>

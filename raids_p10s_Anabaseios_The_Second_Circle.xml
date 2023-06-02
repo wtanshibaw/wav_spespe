@@ -11,203 +11,93 @@
   <entry>Phase1</entry>
   
   <s name="Phase1"> <!-- 開幕 -->
-    <a time="000.0" sync="パンデモニウム:我ハ障害、立チハダカル城壁ナリ！" />
-    <a time="008.0" text="アルテマ" sync="パンデモニウムは「アルテマ」を唱えた。" notice="次は、アルテマ。" />
-    <a time="014.0" text="アルテマ" sync="パンデモニウムの「アルテマ」" />
-    <a time="017.0" text="ソウルグラスプ" sync="パンデモニウムは「ソウルグラスプ」の構え。" notice="次は、ソウルグラスプ。" />
-    <a time="023.0" text="ソウルグラスプ" sync="パンデモニウムの「ソウルグラスプ」" />
-    <a time="031.0" sync="パンデモニウム:アテナ様ノ力……ソノ一片ヲ見ヨ！" />
-    <a time="031.0" text="ディバイドウィング" sync="パンデモニウムは「ディバイドウィング」を唱えた。" notice="次は、ディバイドウィング。" />
-    <a time="034.0" text="ディバイドウィング" sync="パンデモニウムの「ディバイドウィング」" />
-    <a time="037.0" sync="パンデモニウム:絡メ取リ、死ヲモタラソウ！" />
-    <a time="037.0" text="ヘビーウェブ" sync="パンデモニウムは「ヘビーウェブ」の構え。" notice="次は、ヘビーウェブ。" />
-    <a time="042.0" text="ヘビーウェブ" sync="パンデモニウムの「ヘビーウェブ」" />
-    <a time="054.0" text="パンデモニック(ホーリー|リング)" sync="パンデモニウムは「パンデモニック(ホーリー|リング)」を唱えた。" notice="次は、パンデモニック(ホーリー|リング)。" />
-    <a time="059.0" text="パンデモニック(ホーリー|リング)" sync="パンデモニウムの「パンデモニック(ホーリー|リング)」" />
-    <a time="060.0" sync="パンデモニウム:串刺シ、ダ……！" />
-    <a time="061.0" text="尖脚" sync="パンデモニウムは「尖脚」の構え。" notice="次は、尖脚。" />
-    <a time="065.0" text="リタージー・オブ・ベル" sync="リタージー・オブ・ベルの「リタージー・オブ・ベル」" notice="次は、リタージー・オブ・ベル。" />
-    <a time="068.0" text="尖脚" sync="パンデモニウムの「尖脚」" />
-    <a time="075.0" sync="パンデモニウム:我ガ糸ヲ断裂スルハ、困難ナリ……！" />
-    <a time="075.0" text="グランドウェブ" sync="パンデモニウムは「グランドウェブ」の構え。" notice="次は、グランドウェブ。" />
-    <a time="080.0" text="グランドウェブ" sync="パンデモニウムの「グランドウェブ」" />
-    <a time="090.0" sync="パンデモニウム:生命ヲ収監スル……！" />
-    <a time="090.0" text="パンデモニックピラー" sync="パンデモニウムは「パンデモニックピラー」の構え。" notice="次は、パンデモニックピラー。" />
-    <a time="096.0" text="パンデモニックピラー" sync="パンデモニウムの「パンデモニックピラー」" />
-    <a time="096.0" text="衝撃" sync="万魔殿の塔の「衝撃」" notice="次は、衝撃。" />
-    <a time="098.0" text="パンデモニック(ホーリー|リング)" sync="パンデモニウムは「パンデモニック(ホーリー|リング)」を唱えた。" notice="次は、パンデモニック(ホーリー|リング)。" />
-    <a time="099.0" text="ダムドブラスター" sync="万魔殿の塔は「ダムドブラスター」の構え。" notice="次は、ダムドブラスター。" />
-    <a time="102.0" text="インプリズメント" sync="万魔殿の塔の「インプリズメント」" notice="次は、インプリズメント。" />
-    <a time="102.0" text="キャノンスポーン" sync="万魔殿の塔の「キャノンスポーン」" notice="次は、キャノンスポーン。" />
-    <a time="102.0" text="パンデモニック(ホーリー|リング)" sync="パンデモニウムの「パンデモニック(ホーリー|リング)」" />
-    <a time="102.0" text="ダムドブラスター" sync="万魔殿の塔の「ダムドブラスター」" />
-    <a time="104.0" text="スピットウェブ" sync="パンデモニウムは「スピットウェブ」の構え。" notice="次は、スピットウェブ。" />
-    <a time="109.0" text="スピットウェブ" sync="パンデモニウムの「スピットウェブ」" />
-    <a time="119.0" sync="パンデモニウム:地獄ノ呪縛ヲ受ケヨ！" />
-    
     <!-- フェーズ移行 -->
     <t sync="パンデモニウム:地獄ノ呪縛ヲ受ケヨ！" goto="Phase2" />
   </s>
   
   <s name="Phase2"> <!-- タレット(サイコロ) -->
-    <a time="000.0" text="パンデモニックボンド" sync="パンデモニウムは「パンデモニックボンド」を唱えた。" notice="次は、パンデモニックボンド。" />
-    <a time="003.0" text="パンデモニックボンド" sync="パンデモニウムの「パンデモニックボンド」" />
-    <a time="007.0" sync="パンデモニウム:獄内ノ魔力ヲ解キ放タン！" />
-    <a time="007.0" text="パンデモニックメルトン" sync="パンデモニウムは「パンデモニックメルトン」を唱えた。" notice="次は、パンデモニックメルトン。" />
-    <a time="013.0" text="パンデモニックメルトン" sync="パンデモニウムの「パンデモニックメルトン」" />
-    <a time="013.0" text="パンデモニックメルトン" sync="パンデモニウムの「パンデモニックメルトン」" />
-    <a time="016.0" sync="パンデモニウム:監獄スベテガ、貴様ノ敵ダ……！" />
-    <a time="016.0" text="タッチダウン" sync="パンデモニウムは「タッチダウン」の構え。" notice="次は、タッチダウン。" />
-    <a time="025.0" text="タッチダウン" sync="パンデモニウムの「タッチダウン」" />
-    <a time="034.0" text="アルテマ" sync="パンデモニウムは「アルテマ」を唱えた。" notice="次は、アルテマ。" />
-    <a time="039.0" text="アルテマ" sync="パンデモニウムの「アルテマ」" />
-    <a time="043.0" text="ソウルグラスプ" sync="パンデモニウムは「ソウルグラスプ」の構え。" notice="次は、ソウルグラスプ。" />
-    <a time="048.0" text="ソウルグラスプ" sync="パンデモニウムの「ソウルグラスプ」" />
-    <a time="061.0" text="パンデモニックボンド" sync="パンデモニウムは「パンデモニックボンド」を唱えた。" notice="次は、パンデモニックボンド。" />
-    <a time="064.0" text="パンデモニックボンド" sync="パンデモニウムの「パンデモニックボンド」" />
-    <a time="068.0" sync="パンデモニウム:我、大監獄パンデモニウムナリ！" />
-    <a time="068.0" text="パンデモニックタレット" sync="パンデモニウムは「パンデモニックタレット」の構え。" notice="次は、パンデモニックタレット。" />
-    <a time="074.0" text="パンデモニックタレット" sync="パンデモニウムの「パンデモニックタレット」" />
-    <a time="074.0" text="衝撃" sync="万魔殿の塔の「衝撃」" notice="次は、衝撃。" />
-    <a time="085.0" text="コンデムブラスター" sync="万魔殿の塔の「コンデムブラスター」" notice="次は、コンデムブラスター。" />
-    <a time="090.0" text="コンデムブラスター" sync="万魔殿の塔の「コンデムブラスター」" notice="次は、コンデムブラスター。" />
-    <a time="094.0" text="コンデムブラスター" sync="万魔殿の塔の「コンデムブラスター」" notice="次は、コンデムブラスター。" />
-    <a time="099.0" text="コンデムブラスター" sync="万魔殿の塔の「コンデムブラスター」" notice="次は、コンデムブラスター。" />
-    <a time="107.0" sync="パンデモニウム:ドコニ行コウト、見逃サヌ！" />
-    
     <!-- フェーズ移行 -->
     <t sync="パンデモニウム:ドコニ行コウト、見逃サヌ！" goto="Phase3" />
     
     <!-- 1回目パンデモニックボンド -->
     <!-- クアドラ -->
-    <t sync="^1A:[id8]:[pc] gains the effect.*22.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="1A:[id8]:[pc] gains the effect.*22.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="4人で頭割り➔散開" icon="散開A.png" duration="25" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect.*25.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="1A:[id8]:[pc] gains the effect.*25.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="散開➔4人で頭割り" icon="真.png" duration="25" order="-98"/>
     </t>
     
     <!-- ダブル -->
-    <t sync="^1A:[id8]:[pc] gains the effect.*22.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="1A:[id8]:[pc] gains the effect.*22.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="ペアで頭割り➔散開" icon="真.png" duration="25" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect.*25.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="1A:[id8]:[pc] gains the effect.*25.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="10" order="-99"/>
       <v-notice text="散開➔ペアで頭割り" icon="真.png" duration="25" order="-98"/>
     </t>
   </s>
   
   <s name="Phase3"> <!-- 片面焼き -->
-    <a time="000.0" text="パンデモニックレイ" sync="パンデモニウムは「パンデモニックレイ」の構え。" notice="次は、パンデモニックレイ。" />
-    <a time="005.0" text="パンデモニックレイ" sync="パンデモニウムの「パンデモニックレイ」" />
-    <a time="009.0" text="ロード・オブ・ジェイド" sync="立体魔法陣の「ロード・オブ・ジェイド」" notice="次は、ロード・オブ・ジェイド。" />
-    <a time="016.0" text="アルテマ" sync="パンデモニウムは「アルテマ」を唱えた。" notice="次は、アルテマ。" />
-    <a time="021.0" text="アルテマ" sync="パンデモニウムの「アルテマ」" />
-    <a time="025.0" text="ソウルグラスプ" sync="パンデモニウムは「ソウルグラスプ」の構え。" notice="次は、ソウルグラスプ。" />
-    <a time="031.0" text="ソウルグラスプ" sync="パンデモニウムの「ソウルグラスプ」" />
-    <a time="043.0" text="尖脚" sync="パンデモニウムは「尖脚」の構え。" notice="次は、尖脚。" />
-    <a time="050.0" text="尖脚" sync="パンデモニウムの「尖脚」" />
-    <a time="057.0" text="グランドウェブ" sync="パンデモニウムは「グランドウェブ」の構え。" notice="次は、グランドウェブ。" />
-    <a time="062.0" text="グランドウェブ" sync="パンデモニウムの「グランドウェブ」" />
-    <a time="067.0" text="スピットウェブ" sync="パンデモニウムは「スピットウェブ」の構え。" notice="次は、スピットウェブ。" />
-    <a time="072.0" text="スピットウェブ" sync="パンデモニウムの「スピットウェブ」" />
-    <a time="077.0" text="パンデモニックボンド" sync="パンデモニウムは「パンデモニックボンド」を唱えた。" notice="次は、パンデモニックボンド。" />
-    <a time="080.0" text="パンデモニックボンド" sync="パンデモニウムの「パンデモニックボンド」" />
-    <a time="083.0" sync="パンデモニウム:ソノ魂ノ嘆キヲ聞カセヨ！" />
-    <a time="083.0" text="パンデモニックピラー" sync="パンデモニウムは「パンデモニックピラー」の構え。" notice="次は、パンデモニックピラー。" />
-    <a time="088.0" text="パンデモニックピラー" sync="パンデモニウムの「パンデモニックピラー」" />
-    <a time="089.0" text="衝撃" sync="万魔殿の塔の「衝撃」" notice="次は、衝撃。" />
-    <a time="090.0" text="パンデモニック(ホーリー|リング)" sync="パンデモニウムは「パンデモニック(ホーリー|リング)」を唱えた。" notice="次は、パンデモニック(ホーリー|リング)。" />
-    <a time="092.0" text="ダムドブラスター" sync="万魔殿の塔は「ダムドブラスター」の構え。" notice="次は、ダムドブラスター。" />
-    <a time="095.0" text="パンデモニックリング" sync="パンデモニウムの「パンデモニックリング」" />
-    <a time="098.0" text="ダムドブラスター" sync="万魔殿の塔の「ダムドブラスター」" />
-    <a time="100.0" text="パンデモニックレイ" sync="パンデモニウムは「パンデモニックレイ」の構え。" notice="次は、パンデモニックレイ。" />
-    <a time="105.0" text="パンデモニックレイ" sync="パンデモニウムの「パンデモニックレイ」" />
-    <a time="109.0" text="ロード・オブ・ジェイド" sync="立体魔法陣の「ロード・オブ・ジェイド」" notice="次は、ロード・オブ・ジェイド。" />
-    <a time="110.0" sync="パンデモニウム:アテナ様……我ガ母君ノタメ……！" />
-    <a time="110.0" text="ディバイドウィング" sync="パンデモニウムは「ディバイドウィング」を唱えた。" notice="次は、ディバイドウィング。" />
-    <a time="114.0" text="ディバイドウィング" sync="パンデモニウムの「ディバイドウィング」" />
-    <a time="116.0" text="ヘビーウェブ" sync="パンデモニウムは「ヘビーウェブ」の構え。" notice="次は、ヘビーウェブ。" />
-    <a time="121.0" text="ヘビーウェブ" sync="パンデモニウムの「ヘビーウェブ」" />
-    <a time="124.0" text="タッチダウン" sync="パンデモニウムは「タッチダウン」の構え。" notice="次は、タッチダウン。" />
-    <a time="132.0" text="タッチダウン" sync="パンデモニウムの「タッチダウン」" />
-    <a time="145.0" text="パンデモニックメルトン" sync="パンデモニウムは「パンデモニックメルトン」を唱えた。" notice="次は、パンデモニックメルトン。" />
-    <a time="151.0" text="パンデモニックメルトン" sync="パンデモニウムの「パンデモニックメルトン」" />
-    <a time="154.0" text="ソウルグラスプ" sync="パンデモニウムは「ソウルグラスプ」の構え。" notice="次は、ソウルグラスプ。" />
-    <a time="160.0" text="ソウルグラスプ" sync="パンデモニウムの「ソウルグラスプ」" />
-    <a time="176.0" text="ディバイドウィング" sync="パンデモニウムは「ディバイドウィング」を唱えた。" notice="次は、ディバイドウィング。" />
-    <a time="180.0" text="ディバイドウィング" sync="パンデモニウムの「ディバイドウィング」" />
-    <a time="182.0" sync="パンデモニウム:コノ器カラ……零レ落チヨウトモ……！" />
-    
     <!-- 移行 -->
     <t sync="パンデモニウム:コノ器カラ……零レ落チヨウトモ……！" goto="Phase4" />
     
     <!-- 2回目パンデモニックボンド -->
     <!-- 先頭割り -->
-    <t sync="^1A:[id8]:[pc] gains the effect.*38.00 Seconds. BuffID: 0DDE-00">
+    <t sync="1A:[id8]:[pc] gains the effect.*38.00 Seconds. BuffID: 0DDE-00">
       <v-notice text="ペアで頭割り➔散開" icon="真.png" duration="25" order="-98"/>
     </t>
     <!-- 後頭割り -->
-    <t sync="^1A:[id8]:[pc] gains the effect.*41.00 Seconds. BuffID: 0DDE-00">
+    <t sync="1A:[id8]:[pc] gains the effect.*41.00 Seconds. BuffID: 0DDE-00">
       <v-notice text="散開➔ペアで頭割り" icon="真.png" duration="25" order="-98"/>
     </t>
   </s>
   
   <s name="Phase4">
-    <a time="000.0" text="パンデモニックウェブ" sync="パンデモニウムは「パンデモニックウェブ」の構え。" notice="次は、パンデモニックウェブ。" />
-    <a time="005.0" text="パンデモニックウェブ" sync="パンデモニウムの「パンデモニックウェブ」" />
-    <a time="008.0" text="パンデモニックホーリー" sync="パンデモニウムは「パンデモニックホーリー」を唱えた。" notice="次は、パンデモニックホーリー。" />
-    <a time="012.0" text="パンデモニックホーリー" sync="パンデモニウムの「パンデモニックホーリー」" />
-    <a time="016.0" text="パンデモニックボンド" sync="パンデモニウムは「パンデモニックボンド」を唱えた。" notice="次は、パンデモニックボンド。" />
-    <a time="019.0" text="パンデモニックボンド" sync="パンデモニウムの「パンデモニックボンド」" />
-    <a time="025.0" sync="パンデモニウム:貴様ノ全力ヲ見セヨ！" />
-    <a time="025.0" text="魔殿の震撃" sync="パンデモニウムは「魔殿の震撃」の構え。" notice="次は、魔殿の震撃。" />
-    <a time="031.0" text="魔殿の震撃" sync="パンデモニウムの「魔殿の震撃」" />
-    
     <!-- 3回目パンデモニックボンド -->
     <!-- クアドラ -->
-    <t sync="^1A:[id8]:[pc] gains the effect.*32.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="1A:[id8]:[pc] gains the effect.*32.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="4人で頭割り➔散開" icon="散開A.png" duration="35" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect.*35.00 Seconds. BuffID: 0E70-00" sync-count="1" >
+    <t sync="1A:[id8]:[pc] gains the effect.*35.00 Seconds. BuffID: 0E70-00" sync-count="1" >
       <v-notice text="ロールで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="散開➔4人で頭割り" icon="真.png" duration="35" order="-98"/>
     </t>
     
     <!-- ダブル -->
-    <t sync="^1A:[id8]:[pc] gains the effect.*32.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="1A:[id8]:[pc] gains the effect.*32.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="ペアで頭割り➔散開" icon="真.png" duration="35" order="-98"/>
     </t>
-    <t sync="^1A:[id8]:[pc] gains the effect.*35.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
+    <t sync="1A:[id8]:[pc] gains the effect.*35.00 Seconds. BuffID: 0DDF-00" sync-count="4" >
       <v-notice text="ライトパーティで分かれる" icon="接近禁止.png" duration="35" order="-99"/>
       <v-notice text="散開➔ペアで頭割り" icon="真.png" duration="35" order="-98"/>
     </t>
     
     <!-- 後ろ担当 -->
-    <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 37, X4):" notice="後ろ担当" >
+    <t sync="1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 37, X4):" notice="後ろ担当" >
       <v-notice text="後ろで壁を作る" icon="注意.png" duration="6" order="-99" />
     </t>
   </s>
   
   <!-- 共通トリガー -->
   <!-- Marker Set -->
-  <t sync="^1B:[id8]:[pc]:0000:[id4]:(?&lt;marker&gt;[0-9a-fA-F]{4}):" sync-count="1" >
+  <t sync="1B:[id8]:[pc]:0000:[id4]:(?&lt;marker&gt;[0-9a-fA-F]{4}):" sync-count="1" >
     <expressions>
       <set name="marker_origin" value="0x${marker}" scope="CurrentZone" />
     </expressions>
   </t>
   
   <!-- 頭割り -->
-  <t sync="^1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 39, X4):" notice="頭割り対象" >
+  <t sync="1B:[id8]:[mex]:0000:[id4]:EVAL(VAR['marker_origin'] - 39, X4):" notice="頭割り対象" >
     <v-notice text="自分が頭割り" icon="頭割り.png" duration="5" order="-99" />
   </t>
   
-  <!-- 線の対象 -->
+  <!-- 線の対象 -->  
   <t sync="23:[id8]:パンデモニウム:[id8]:[mex]:0000:0000:00F2:" notice="線対象者">
     <v-notice text="自分が線誘導" icon="対象範囲攻撃03.png" duration="5" order="-99" />
   </t>
